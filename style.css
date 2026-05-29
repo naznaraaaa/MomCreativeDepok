@@ -1,0 +1,654 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f7ece8;
+  font-family:'Poppins', sans-serif;
+  overflow-x:hidden;
+  color:#444;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+  width:100%;
+  padding:20px 8%;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.1);
+}
+
+.nav-logo{
+  color:white;
+  font-size:22px;
+  font-weight:700;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  opacity:0.7;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  position:relative;
+  width:100%;
+  height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+}
+
+.hero-image{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:rgba(243, 54, 147, 0.65);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+  color:white;
+
+  padding:20px;
+}
+
+.hero-content h1{
+  font-size:72px;
+  margin-bottom:15px;
+
+  font-family:'Playfair Display', serif;
+}
+
+.hero-content p{
+  font-size:22px;
+  margin-bottom:35px;
+}
+
+.hero-btn{
+  display:inline-block;
+
+  padding:14px 35px;
+
+  background:white;
+  color:#f33693;
+
+  text-decoration:none;
+  border-radius:50px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  transform:translateY(-5px);
+}
+
+/* ================= WAVE ================= */
+
+.wave{
+  position:absolute;
+  bottom:-2px;
+
+  width:100%;
+  height:50px;
+
+  background:
+  radial-gradient(
+    circle at 25px -5px,
+    #f7ece8 25px,
+    #f33693 26px
+  );
+
+  background-size:50px 50px;
+}
+
+/* ================= LOGO ================= */
+
+.logo-section{
+  padding:120px 8% 80px;
+}
+
+.logo-container{
+  width:100%;
+  max-width:1000px;
+
+  margin:auto;
+
+  padding:80px;
+
+  background:linear-gradient(
+    135deg,
+    #f05ba4,
+    #d95ca0
+  );
+
+  border-radius:40px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+}
+
+.main-logo{
+  width:350px;
+  object-fit:contain;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  width:90%;
+  max-width:1300px;
+
+  margin:0 auto 120px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  border-radius:40px;
+  overflow:hidden;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.about-left{
+  background:#f33693;
+  color:white;
+
+  position:relative;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:70px;
+}
+
+.about-left::after{
+  content:"";
+
+  position:absolute;
+  right:-35px;
+  top:0;
+
+  width:70px;
+  height:100%;
+
+  background:
+  radial-gradient(
+    circle at left center,
+    transparent 34px,
+    #de5aa1 35px
+  );
+
+  background-size:70px 70px;
+}
+
+.about-text{
+  max-width:500px;
+}
+
+.mini-title{
+  font-size:15px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.about-text h2{
+  font-size:52px;
+  line-height:1.1;
+
+  margin:20px 0;
+
+  font-family:'Playfair Display', serif;
+}
+
+.about-text p{
+  line-height:1.9;
+  margin-bottom:20px;
+}
+
+.about-right img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ================= PRODUK ================= */
+
+.produk-section{
+  width:90%;
+  max-width:1400px;
+
+  margin:auto;
+  padding-bottom:120px;
+}
+
+.section-heading{
+  text-align:center;
+  margin-bottom:80px;
+}
+
+.section-heading span{
+  color:#8a7b96;
+  font-size:28px;
+}
+
+.section-heading h2{
+  font-size:56px;
+  color:#6e627d;
+
+  font-family:'Playfair Display', serif;
+}
+
+.produk-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:50px;
+}
+
+.produk-card{
+  background:white;
+
+  border-radius:30px;
+  padding:30px;
+
+  text-align:center;
+
+  transition:0.4s;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.produk-card:hover{
+  transform:translateY(-10px);
+}
+
+/* ================= SHAPE ================= */
+
+.shape{
+  width:100%;
+  aspect-ratio:1/1;
+
+  overflow:hidden;
+
+  background:#f33693;
+
+  border-radius:20px;
+
+  margin-bottom:20px;
+}
+
+.shape img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:0.4s;
+}
+
+.produk-card:hover .shape img{
+  transform:scale(1.08);
+}
+
+.square{
+  border-radius:18px;
+}
+
+.circle{
+  border-radius:50%;
+}
+
+.hexagon{
+  clip-path:polygon(
+    25% 6.7%,
+    75% 6.7%,
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%
+  );
+}
+
+.star{
+  clip-path:polygon(
+    50% 0%,
+    61% 10%,
+    75% 6%,
+    82% 20%,
+    96% 25%,
+    90% 40%,
+    100% 50%,
+    90% 60%,
+    96% 75%,
+    82% 80%,
+    75% 94%,
+    61% 90%,
+    50% 100%,
+    39% 90%,
+    25% 94%,
+    18% 80%,
+    4% 75%,
+    10% 60%,
+    0% 50%,
+    10% 40%,
+    4% 25%,
+    18% 20%,
+    25% 6%,
+    39% 10%
+  );
+}
+
+/* ================= CARD ================= */
+
+.produk-card h3{
+  color:#6f627d;
+  font-size:24px;
+
+  margin-bottom:10px;
+}
+
+.produk-card p{
+  color:#7d7188;
+  line-height:1.7;
+
+  margin-bottom:25px;
+}
+
+/* ================= BUTTON ================= */
+
+.order-btn{
+  display:inline-block;
+
+  padding:12px 30px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  background:#766687;
+  color:white;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.order-btn:hover{
+  background:#5f5470;
+}
+
+/* ================= INFO ================= */
+
+.info-section{
+  width:90%;
+  max-width:1200px;
+
+  margin:0 auto 120px;
+}
+
+.info-card{
+  background:linear-gradient(
+    135deg,
+    #f33693,
+    #d95ca0
+  );
+
+  color:white;
+
+  border-radius:40px;
+  padding:80px;
+}
+
+.info-card h2{
+  font-size:48px;
+  margin-bottom:50px;
+
+  font-family:'Playfair Display', serif;
+}
+
+.step-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:30px;
+}
+
+.step-item{
+  display:flex;
+  gap:20px;
+
+  align-items:flex-start;
+}
+
+.step-item span{
+  width:50px;
+  height:50px;
+
+  border-radius:50%;
+  background:white;
+
+  color:#f33693;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-weight:700;
+}
+
+.step-item p{
+  flex:1;
+  line-height:1.8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+  padding:0 8% 120px;
+}
+
+.contact-container{
+  background:white;
+
+  border-radius:40px;
+  overflow:hidden;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.contact-left{
+  padding:80px;
+}
+
+.contact-left h2{
+  font-size:52px;
+  color:#f33693;
+
+  margin-bottom:20px;
+
+  font-family:'Playfair Display', serif;
+}
+
+.contact-left p{
+  line-height:1.9;
+  margin-bottom:40px;
+}
+
+.contact-list{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.contact-item{
+  padding:18px 20px;
+
+  background:#f8f2f5;
+  border-radius:15px;
+}
+
+.contact-right{
+  background:linear-gradient(
+    135deg,
+    #f33693,
+    #d95ca0
+  );
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:50px;
+
+  color:white;
+  text-align:center;
+}
+
+.contact-right h3{
+  font-size:54px;
+  line-height:1.3;
+
+  font-family:'Playfair Display', serif;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  padding:30px;
+  text-align:center;
+
+  background:#f33693;
+  color:white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+  .about,
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .about-left::after{
+    display:none;
+  }
+
+  .step-list{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    gap:15px;
+  }
+
+  .hero-content h1{
+    font-size:48px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+  .logo-container{
+    padding:50px 30px;
+  }
+
+  .main-logo{
+    width:220px;
+  }
+
+  .about-left,
+  .contact-left,
+  .info-card{
+    padding:40px 30px;
+  }
+
+  .about-text h2,
+  .contact-left h2,
+  .info-card h2{
+    font-size:38px;
+  }
+
+  .section-heading h2{
+    font-size:40px;
+  }
+
+  .contact-right h3{
+    font-size:36px;
+  }
+
+  .shape{
+    width:150px;
+    height:150px;
+  }
+
+}
