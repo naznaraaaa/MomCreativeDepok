@@ -752,3 +752,128 @@ nav a:hover{
 *{
   font-family:'Poppins', sans-serif !important;
 }
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px){
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:60px;
+  }
+
+  .produk-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+
+/* ================= HP ================= */
+
+@media (max-width:768px){
+
+  .navbar{
+    padding:15px 25px;
+  }
+
+  .nav-logo{
+    font-size:18px;
+  }
+
+  .navbar nav{
+    gap:15px;
+  }
+
+  .hero h1{
+    font-size:42px;
+    text-align:center;
+  }
+
+  .hero p{
+    font-size:18px;
+    text-align:center;
+  }
+
+  .about{
+    width:95%;
+    grid-template-columns:1fr;
+  }
+
+  .about-left{
+    padding:40px 30px;
+  }
+
+  .about-right{
+    min-height:300px;
+  }
+
+  .about-text h2{
+    font-size:42px;
+  }
+
+  .produk-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-heading h2{
+    font-size:42px;
+  }
+
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .contact-left,
+  .contact-right{
+    width:100%;
+  }
+
+  iframe{
+    height:250px;
+  }
+
+}
+
+
+/* ================= HP KECIL ================= */
+
+@media (max-width:480px){
+
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .hero-btn{
+    padding:12px 25px;
+  }
+
+  .about-text h2{
+    font-size:34px;
+  }
+
+  .section-heading h2{
+    font-size:34px;
+  }
+
+  .contact-card{
+    padding:20px;
+  }
+
+}
